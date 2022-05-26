@@ -1,0 +1,47 @@
+cavaleiros.map((item)=>{
+    //Clone Node - Vai fazer uma cópia de um elemento HTML, se dentro dos parênteses estiver "false", ele vai pegar somente o principal, caso contrario se estiver "true", ele vai pegar o elemento que foi especificado.
+
+    //Clone Node - It will make a copy of an HTML element, if inside the parentheses it is "false", it will take only the main one, otherwise if it is "true", it will take the element that was specified.
+    let gold = document.querySelector('.models .cavs-item').cloneNode(true);
+    document.querySelector('.area').append(gold);
+
+    //Preenchendo a tela inicial / 
+    gold.querySelector('.cavs-item--img img').src = item.img;
+    gold.querySelector('.cavs-item--name').innerHTML = `${item.name} de ${item.constellation}`;
+
+    //Função para quando clicar no link a página não irá atualizar.
+    //Function for when clicking on the link the page will not refresh.
+    gold.querySelector('.cavs-item a ').addEventListener('click',(e)=>{
+        e.preventDefault()
+        console.log('clicou')
+        //Abrindo a janela modal / Open window modal
+        document.querySelector('.modal-area').style.display = 'flex';
+
+        //Preenchendo os dados
+        document.querySelector('.cavsBig img').src = item.img;
+        document.querySelector('.name').innerHTML = `${item.name} de ${item.constellation}`;
+        document.querySelector('.born').innerHTML = `Local de nascimento - ${item.born}`;
+        document.querySelector('.age').innerHTML = `Idade - ${item.idade}`;
+        document.querySelector('.description').innerHTML = item.description;
+    })
+
+    // Close modal button / Botão para fechar a janela modal.
+    document.querySelector('.cancelButton').addEventListener('click',()=>{
+        document.querySelector('.modal-area').style.display = 'none';
+    })
+
+    //Fechando a janela modal no mobile / Close modal button in mobile
+    document.querySelector('.mobileButton').addEventListener('click',()=>{
+        document.querySelector('.modal-area').style.display = 'none';
+    })
+
+    //Evento de click para quando clicar fora do modal ele irá fechar
+    //Click event for when clicking outside the modal it will close
+    document.querySelector('.modal-area').addEventListener('click',(e)=>{
+        if(e.target == document.querySelector('.modal-area')){
+            document.querySelector('.modal-area').style.display = 'none';
+        }
+        
+    })
+
+})
