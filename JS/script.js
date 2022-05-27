@@ -14,7 +14,7 @@ cavaleiros.map((item)=>{
     gold.querySelector('.cavs-item a ').addEventListener('click',(e)=>{
         e.preventDefault()
         console.log('clicou')
-        //Abrindo a janela modal / Open window modal
+        //Abrindo a janela modal. / Open window modal.
         document.querySelector('.modal-area').style.display = 'flex';
 
         //Preenchendo os dados
@@ -25,18 +25,18 @@ cavaleiros.map((item)=>{
         document.querySelector('.description').innerHTML = item.description;
     })
 
-    // Close modal button / Botão para fechar a janela modal.
+    // Close modal button. / Botão para fechar a janela modal.
     document.querySelector('.cancelButton').addEventListener('click',()=>{
         document.querySelector('.modal-area').style.display = 'none';
     })
 
-    //Fechando a janela modal no mobile / Close modal button in mobile
+    //Fechando a janela modal no mobile. / Close modal button in mobile.
     document.querySelector('.mobileButton').addEventListener('click',()=>{
         document.querySelector('.modal-area').style.display = 'none';
     })
 
-    //Evento de click para quando clicar fora do modal ele irá fechar
-    //Click event for when clicking outside the modal it will close
+    //Evento de click para quando clicar fora do modal ele irá fechar.
+    //Click event for when clicking outside the modal it will close.
     document.querySelector('.modal-area').addEventListener('click',(e)=>{
         if(e.target == document.querySelector('.modal-area')){
             document.querySelector('.modal-area').style.display = 'none';
