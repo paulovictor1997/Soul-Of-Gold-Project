@@ -210,8 +210,8 @@ footer .content{
 
 @media screen and (max-width:500px){
     .window-body{
-        width: 400px;
-        margin-top: 50px;
+        width: 380px;
+        margin-top: 25%;
         padding: 20px;
     }
 }
