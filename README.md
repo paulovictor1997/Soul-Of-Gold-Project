@@ -5,7 +5,7 @@
  - I created this simple project, in order to improve myself even more in my studies. And that's the result of everything I've learned so far.
 
 ## Solução no ar  / Live Solution 
- - Link [https://paulovictor1997.github.io/Soul-Of-Gold-Project/](https://paulovictor1997.github.io/Soul-Of-Gold-Project/)
+ - Link  - [https://paulovictor1997.github.io/Soul-Of-Gold-Project/](https://paulovictor1997.github.io/Soul-Of-Gold-Project/)
 
 ### Screenshot
 
